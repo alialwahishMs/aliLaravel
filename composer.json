@@ -34,8 +34,7 @@
     },
     "scripts": {
         "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -49,9 +48,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-                "laravel/dusk"
-            ]
+            "dont-discover": []
         }
     },
     "config": {
