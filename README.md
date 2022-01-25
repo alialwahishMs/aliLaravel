@@ -7,6 +7,23 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
+
+
+## This image is modified version of laravel to run on Azure webApp service (Nginx configuration)
+
+### Steps to install laravel on Azure webApp service 
+
+1. create the azure webApp (code php 8.0).
+2. ssh to the webApp :
+- make a copy of the default file in `/etc/nginx/sites-available/`
+    `cp /etc/nginx/sites-available/default /home/site/default`
+- edit the copied version and change the root to `/home/site/wwwroot/public`, save and exit
+    `nano /home/site/default`
+3. exit ssh and form `Deployment Center' pull the repo to your webApp
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
