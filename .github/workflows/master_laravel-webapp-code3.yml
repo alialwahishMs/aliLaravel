@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - laravel-webapp-code-2
+name: Build and deploy PHP app to Azure Web App - laravel-webApp-code3
 
 on:
   push:
@@ -54,7 +54,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'laravel-webapp-code-2'
+          app-name: 'laravel-webApp-code3'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A4DB5FB7A7A64CC4B670096BADAE37EF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B6F5BD75054341D9B0ADD5AF5E7F9C46 }}
           package: .
