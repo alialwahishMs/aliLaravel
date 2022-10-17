@@ -20,10 +20,11 @@
     `cp /etc/nginx/sites-available/default /home/site/default`
 - edit the copied version and change the root to `/home/site/wwwroot/public`, save and exit
     `nano /home/site/default`
-3. Azure installs git repos from the Deployment Center totally different (`GitHub` vs `External Git` ), for me the only way it works if you've forked the repo to your github account and pull it to your webApp using the `GitHub` option under the CI/CD in the Source section.
+3. _(Optional)_ In case problem with working Laravel routes, replace `index index.php index.html index.htm hostingstart.html;` by `try_files $uri $uri/ /index.php?$query_string;`. If problem continues use `try_files $uri $uri/ /index.php?$args;` insted of.
+4. Azure installs git repos from the Deployment Center totally different (`GitHub` vs `External Git` ), for me the only way it works if you've forked the repo to your github account and pull it to your webApp using the `GitHub` option under the CI/CD in the Source section.
 > Note:Definatly you don't have to fork my repo if you want to pull a fresh one from [laravel](https://github.com/laravel/laravel) you'll just need to run the command in the `startup.sh` file separately, also you can delete the `.htaccess` file. 
-4. Once you've linked your repo from the Deployment Center this will kick a Github action in your account for building and deploying.
-5. Navigate to Configuration -> General setting -> set the startup command to `/home/site/wwwroot/startup.sh` and Save, check your website and it should be up and running (Make sure browser session is not cached).
+5. Once you've linked your repo from the Deployment Center this will kick a Github action in your account for building and deploying.
+6. Navigate to Configuration -> General setting -> set the startup command to `/home/site/wwwroot/startup.sh` and Save, check your website and it should be up and running (Make sure browser session is not cached).
 
 
 
